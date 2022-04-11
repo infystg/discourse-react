@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103405",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "ar_internal_metadata",
+  "fields": [
+    {
+      "fieldName": "key",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ArInternalMetadata",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

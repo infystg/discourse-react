@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103454",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "incoming_referers",
+  "fields": [
+    {
+      "fieldName": "path",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "incomingDomainId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "IncomingReferers",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

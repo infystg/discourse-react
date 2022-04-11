@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103525",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "quoted_posts",
+  "fields": [
+    {
+      "fieldName": "postId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "quotedPostId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "QuotedPosts",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

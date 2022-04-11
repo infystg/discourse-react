@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103641",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "user_visits",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "visitedAt",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postsRead",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "mobile",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "timeRead",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserVisits",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

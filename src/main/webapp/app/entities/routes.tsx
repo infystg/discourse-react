@@ -2,6 +2,175 @@ import React from 'react';
 import { Switch } from 'react-router-dom';
 import ErrorBoundaryRoute from 'app/shared/error/error-boundary-route';
 
+import AllowedPmUsers from './allowed-pm-users';
+import AnonymousUsers from './anonymous-users';
+import ApiKeyScopes from './api-key-scopes';
+import ApiKeys from './api-keys';
+import ApplicationRequests from './application-requests';
+import ArInternalMetadata from './ar-internal-metadata';
+import BackupDraftPosts from './backup-draft-posts';
+import BackupDraftTopics from './backup-draft-topics';
+import BackupMetadata from './backup-metadata';
+import BadgeGroupings from './badge-groupings';
+import BadgePosts from './badge-posts';
+import BadgeTypes from './badge-types';
+import Badges from './badges';
+import Bookmarks from './bookmarks';
+import Categories from './categories';
+import CategoriesWebHooks from './categories-web-hooks';
+import CategoryCustomFields from './category-custom-fields';
+import CategoryFeaturedTopics from './category-featured-topics';
+import CategoryGroups from './category-groups';
+import CategorySearchData from './category-search-data';
+import CategoryTagGroups from './category-tag-groups';
+import CategoryTagStats from './category-tag-stats';
+import CategoryTags from './category-tags';
+import CategoryUsers from './category-users';
+import ChildThemes from './child-themes';
+import ColorSchemeColors from './color-scheme-colors';
+import ColorSchemes from './color-schemes';
+import CustomEmojis from './custom-emojis';
+import Developers from './developers';
+import DirectoryItems from './directory-items';
+import DismissedTopicUsers from './dismissed-topic-users';
+import DoNotDisturbTimings from './do-not-disturb-timings';
+import DraftSequences from './draft-sequences';
+import Drafts from './drafts';
+import EmailChangeRequests from './email-change-requests';
+import EmailLogs from './email-logs';
+import EmailTokens from './email-tokens';
+import EmbeddableHosts from './embeddable-hosts';
+import GivenDailyLikes from './given-daily-likes';
+import GroupArchivedMessages from './group-archived-messages';
+import GroupCategoryNotificationDefaults from './group-category-notification-defaults';
+import GroupCustomFields from './group-custom-fields';
+import GroupHistories from './group-histories';
+import GroupMentions from './group-mentions';
+import GroupRequests from './group-requests';
+import GroupTagNotificationDefaults from './group-tag-notification-defaults';
+import GroupUsers from './group-users';
+import Groups from './groups';
+import GroupsWebHooks from './groups-web-hooks';
+import IgnoredUsers from './ignored-users';
+import ImapSyncLogs from './imap-sync-logs';
+import IncomingDomains from './incoming-domains';
+import IncomingEmails from './incoming-emails';
+import IncomingLinks from './incoming-links';
+import IncomingReferers from './incoming-referers';
+import InvitedGroups from './invited-groups';
+import InvitedUsers from './invited-users';
+import Invites from './invites';
+import JavascriptCaches from './javascript-caches';
+import LinkedTopics from './linked-topics';
+import MessageBus from './message-bus';
+import MutedUsers from './muted-users';
+import Notifications from './notifications';
+import Oauth2UserInfos from './oauth-2-user-infos';
+import OnceoffLogs from './onceoff-logs';
+import OptimizedImages from './optimized-images';
+import Permalinks from './permalinks';
+import PluginStoreRows from './plugin-store-rows';
+import PollOptions from './poll-options';
+import PollVotes from './poll-votes';
+import Polls from './polls';
+import PostActionTypes from './post-action-types';
+import PostActions from './post-actions';
+import PostCustomFields from './post-custom-fields';
+import PostDetails from './post-details';
+import PostReplies from './post-replies';
+import PostReplyKeys from './post-reply-keys';
+import PostRevisions from './post-revisions';
+import PostSearchData from './post-search-data';
+import PostStats from './post-stats';
+import PostTimings from './post-timings';
+import PostUploads from './post-uploads';
+import Posts from './posts';
+import PublishedPages from './published-pages';
+import PushSubscriptions from './push-subscriptions';
+import QuotedPosts from './quoted-posts';
+import RemoteThemes from './remote-themes';
+import ReviewableClaimedTopics from './reviewable-claimed-topics';
+import ReviewableHistories from './reviewable-histories';
+import ReviewableScores from './reviewable-scores';
+import Reviewables from './reviewables';
+import SchedulerStats from './scheduler-stats';
+import SchemaMigrationDetails from './schema-migration-details';
+import SchemaMigrations from './schema-migrations';
+import ScreenedEmails from './screened-emails';
+import ScreenedIpAddresses from './screened-ip-addresses';
+import ScreenedUrls from './screened-urls';
+import SearchLogs from './search-logs';
+import SharedDrafts from './shared-drafts';
+import ShelvedNotifications from './shelved-notifications';
+import SingleSignOnRecords from './single-sign-on-records';
+import SiteSettings from './site-settings';
+import SkippedEmailLogs from './skipped-email-logs';
+import StylesheetCache from './stylesheet-cache';
+import TagGroupMemberships from './tag-group-memberships';
+import TagGroupPermissions from './tag-group-permissions';
+import TagGroups from './tag-groups';
+import TagSearchData from './tag-search-data';
+import TagUsers from './tag-users';
+import Tags from './tags';
+import TagsWebHooks from './tags-web-hooks';
+import ThemeFields from './theme-fields';
+import ThemeModifierSets from './theme-modifier-sets';
+import ThemeSettings from './theme-settings';
+import ThemeTranslationOverrides from './theme-translation-overrides';
+import Themes from './themes';
+import TopTopics from './top-topics';
+import TopicAllowedGroups from './topic-allowed-groups';
+import TopicAllowedUsers from './topic-allowed-users';
+import TopicCustomFields from './topic-custom-fields';
+import TopicEmbeds from './topic-embeds';
+import TopicGroups from './topic-groups';
+import TopicInvites from './topic-invites';
+import TopicLinkClicks from './topic-link-clicks';
+import TopicLinks from './topic-links';
+import TopicSearchData from './topic-search-data';
+import TopicTags from './topic-tags';
+import TopicThumbnails from './topic-thumbnails';
+import TopicTimers from './topic-timers';
+import TopicUsers from './topic-users';
+import TopicViews from './topic-views';
+import Topics from './topics';
+import TranslationOverrides from './translation-overrides';
+import UnsubscribeKeys from './unsubscribe-keys';
+import Uploads from './uploads';
+import UserActions from './user-actions';
+import UserApiKeyScopes from './user-api-key-scopes';
+import UserApiKeys from './user-api-keys';
+import UserArchivedMessages from './user-archived-messages';
+import UserAssociatedAccounts from './user-associated-accounts';
+import UserAuthTokenLogs from './user-auth-token-logs';
+import UserAuthTokens from './user-auth-tokens';
+import UserAvatars from './user-avatars';
+import UserBadges from './user-badges';
+import UserCustomFields from './user-custom-fields';
+import UserEmails from './user-emails';
+import UserExports from './user-exports';
+import UserFieldOptions from './user-field-options';
+import UserFields from './user-fields';
+import UserHistories from './user-histories';
+import UserIpAddressHistories from './user-ip-address-histories';
+import UserNotificationSchedules from './user-notification-schedules';
+import UserOpenIds from './user-open-ids';
+import UserOptions from './user-options';
+import UserProfileViews from './user-profile-views';
+import UserProfiles from './user-profiles';
+import UserSearchData from './user-search-data';
+import UserSecondFactors from './user-second-factors';
+import UserSecurityKeys from './user-security-keys';
+import UserStats from './user-stats';
+import UserUploads from './user-uploads';
+import UserVisits from './user-visits';
+import UserWarnings from './user-warnings';
+import Users from './users';
+import WatchedWords from './watched-words';
+import WebCrawlerRequests from './web-crawler-requests';
+import WebHookEventTypesHooks from './web-hook-event-types-hooks';
+import WebHookEvents from './web-hook-events';
+import WebHooks from './web-hooks';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default ({ match }) => {
@@ -9,6 +178,175 @@ export default ({ match }) => {
     <div>
       <Switch>
         {/* prettier-ignore */}
+        <ErrorBoundaryRoute path={`${match.url}allowed-pm-users`} component={AllowedPmUsers} />
+        <ErrorBoundaryRoute path={`${match.url}anonymous-users`} component={AnonymousUsers} />
+        <ErrorBoundaryRoute path={`${match.url}api-key-scopes`} component={ApiKeyScopes} />
+        <ErrorBoundaryRoute path={`${match.url}api-keys`} component={ApiKeys} />
+        <ErrorBoundaryRoute path={`${match.url}application-requests`} component={ApplicationRequests} />
+        <ErrorBoundaryRoute path={`${match.url}ar-internal-metadata`} component={ArInternalMetadata} />
+        <ErrorBoundaryRoute path={`${match.url}backup-draft-posts`} component={BackupDraftPosts} />
+        <ErrorBoundaryRoute path={`${match.url}backup-draft-topics`} component={BackupDraftTopics} />
+        <ErrorBoundaryRoute path={`${match.url}backup-metadata`} component={BackupMetadata} />
+        <ErrorBoundaryRoute path={`${match.url}badge-groupings`} component={BadgeGroupings} />
+        <ErrorBoundaryRoute path={`${match.url}badge-posts`} component={BadgePosts} />
+        <ErrorBoundaryRoute path={`${match.url}badge-types`} component={BadgeTypes} />
+        <ErrorBoundaryRoute path={`${match.url}badges`} component={Badges} />
+        <ErrorBoundaryRoute path={`${match.url}bookmarks`} component={Bookmarks} />
+        <ErrorBoundaryRoute path={`${match.url}categories`} component={Categories} />
+        <ErrorBoundaryRoute path={`${match.url}categories-web-hooks`} component={CategoriesWebHooks} />
+        <ErrorBoundaryRoute path={`${match.url}category-custom-fields`} component={CategoryCustomFields} />
+        <ErrorBoundaryRoute path={`${match.url}category-featured-topics`} component={CategoryFeaturedTopics} />
+        <ErrorBoundaryRoute path={`${match.url}category-groups`} component={CategoryGroups} />
+        <ErrorBoundaryRoute path={`${match.url}category-search-data`} component={CategorySearchData} />
+        <ErrorBoundaryRoute path={`${match.url}category-tag-groups`} component={CategoryTagGroups} />
+        <ErrorBoundaryRoute path={`${match.url}category-tag-stats`} component={CategoryTagStats} />
+        <ErrorBoundaryRoute path={`${match.url}category-tags`} component={CategoryTags} />
+        <ErrorBoundaryRoute path={`${match.url}category-users`} component={CategoryUsers} />
+        <ErrorBoundaryRoute path={`${match.url}child-themes`} component={ChildThemes} />
+        <ErrorBoundaryRoute path={`${match.url}color-scheme-colors`} component={ColorSchemeColors} />
+        <ErrorBoundaryRoute path={`${match.url}color-schemes`} component={ColorSchemes} />
+        <ErrorBoundaryRoute path={`${match.url}custom-emojis`} component={CustomEmojis} />
+        <ErrorBoundaryRoute path={`${match.url}developers`} component={Developers} />
+        <ErrorBoundaryRoute path={`${match.url}directory-items`} component={DirectoryItems} />
+        <ErrorBoundaryRoute path={`${match.url}dismissed-topic-users`} component={DismissedTopicUsers} />
+        <ErrorBoundaryRoute path={`${match.url}do-not-disturb-timings`} component={DoNotDisturbTimings} />
+        <ErrorBoundaryRoute path={`${match.url}draft-sequences`} component={DraftSequences} />
+        <ErrorBoundaryRoute path={`${match.url}drafts`} component={Drafts} />
+        <ErrorBoundaryRoute path={`${match.url}email-change-requests`} component={EmailChangeRequests} />
+        <ErrorBoundaryRoute path={`${match.url}email-logs`} component={EmailLogs} />
+        <ErrorBoundaryRoute path={`${match.url}email-tokens`} component={EmailTokens} />
+        <ErrorBoundaryRoute path={`${match.url}embeddable-hosts`} component={EmbeddableHosts} />
+        <ErrorBoundaryRoute path={`${match.url}given-daily-likes`} component={GivenDailyLikes} />
+        <ErrorBoundaryRoute path={`${match.url}group-archived-messages`} component={GroupArchivedMessages} />
+        <ErrorBoundaryRoute path={`${match.url}group-category-notification-defaults`} component={GroupCategoryNotificationDefaults} />
+        <ErrorBoundaryRoute path={`${match.url}group-custom-fields`} component={GroupCustomFields} />
+        <ErrorBoundaryRoute path={`${match.url}group-histories`} component={GroupHistories} />
+        <ErrorBoundaryRoute path={`${match.url}group-mentions`} component={GroupMentions} />
+        <ErrorBoundaryRoute path={`${match.url}group-requests`} component={GroupRequests} />
+        <ErrorBoundaryRoute path={`${match.url}group-tag-notification-defaults`} component={GroupTagNotificationDefaults} />
+        <ErrorBoundaryRoute path={`${match.url}group-users`} component={GroupUsers} />
+        <ErrorBoundaryRoute path={`${match.url}groups`} component={Groups} />
+        <ErrorBoundaryRoute path={`${match.url}groups-web-hooks`} component={GroupsWebHooks} />
+        <ErrorBoundaryRoute path={`${match.url}ignored-users`} component={IgnoredUsers} />
+        <ErrorBoundaryRoute path={`${match.url}imap-sync-logs`} component={ImapSyncLogs} />
+        <ErrorBoundaryRoute path={`${match.url}incoming-domains`} component={IncomingDomains} />
+        <ErrorBoundaryRoute path={`${match.url}incoming-emails`} component={IncomingEmails} />
+        <ErrorBoundaryRoute path={`${match.url}incoming-links`} component={IncomingLinks} />
+        <ErrorBoundaryRoute path={`${match.url}incoming-referers`} component={IncomingReferers} />
+        <ErrorBoundaryRoute path={`${match.url}invited-groups`} component={InvitedGroups} />
+        <ErrorBoundaryRoute path={`${match.url}invited-users`} component={InvitedUsers} />
+        <ErrorBoundaryRoute path={`${match.url}invites`} component={Invites} />
+        <ErrorBoundaryRoute path={`${match.url}javascript-caches`} component={JavascriptCaches} />
+        <ErrorBoundaryRoute path={`${match.url}linked-topics`} component={LinkedTopics} />
+        <ErrorBoundaryRoute path={`${match.url}message-bus`} component={MessageBus} />
+        <ErrorBoundaryRoute path={`${match.url}muted-users`} component={MutedUsers} />
+        <ErrorBoundaryRoute path={`${match.url}notifications`} component={Notifications} />
+        <ErrorBoundaryRoute path={`${match.url}oauth-2-user-infos`} component={Oauth2UserInfos} />
+        <ErrorBoundaryRoute path={`${match.url}onceoff-logs`} component={OnceoffLogs} />
+        <ErrorBoundaryRoute path={`${match.url}optimized-images`} component={OptimizedImages} />
+        <ErrorBoundaryRoute path={`${match.url}permalinks`} component={Permalinks} />
+        <ErrorBoundaryRoute path={`${match.url}plugin-store-rows`} component={PluginStoreRows} />
+        <ErrorBoundaryRoute path={`${match.url}poll-options`} component={PollOptions} />
+        <ErrorBoundaryRoute path={`${match.url}poll-votes`} component={PollVotes} />
+        <ErrorBoundaryRoute path={`${match.url}polls`} component={Polls} />
+        <ErrorBoundaryRoute path={`${match.url}post-action-types`} component={PostActionTypes} />
+        <ErrorBoundaryRoute path={`${match.url}post-actions`} component={PostActions} />
+        <ErrorBoundaryRoute path={`${match.url}post-custom-fields`} component={PostCustomFields} />
+        <ErrorBoundaryRoute path={`${match.url}post-details`} component={PostDetails} />
+        <ErrorBoundaryRoute path={`${match.url}post-replies`} component={PostReplies} />
+        <ErrorBoundaryRoute path={`${match.url}post-reply-keys`} component={PostReplyKeys} />
+        <ErrorBoundaryRoute path={`${match.url}post-revisions`} component={PostRevisions} />
+        <ErrorBoundaryRoute path={`${match.url}post-search-data`} component={PostSearchData} />
+        <ErrorBoundaryRoute path={`${match.url}post-stats`} component={PostStats} />
+        <ErrorBoundaryRoute path={`${match.url}post-timings`} component={PostTimings} />
+        <ErrorBoundaryRoute path={`${match.url}post-uploads`} component={PostUploads} />
+        <ErrorBoundaryRoute path={`${match.url}posts`} component={Posts} />
+        <ErrorBoundaryRoute path={`${match.url}published-pages`} component={PublishedPages} />
+        <ErrorBoundaryRoute path={`${match.url}push-subscriptions`} component={PushSubscriptions} />
+        <ErrorBoundaryRoute path={`${match.url}quoted-posts`} component={QuotedPosts} />
+        <ErrorBoundaryRoute path={`${match.url}remote-themes`} component={RemoteThemes} />
+        <ErrorBoundaryRoute path={`${match.url}reviewable-claimed-topics`} component={ReviewableClaimedTopics} />
+        <ErrorBoundaryRoute path={`${match.url}reviewable-histories`} component={ReviewableHistories} />
+        <ErrorBoundaryRoute path={`${match.url}reviewable-scores`} component={ReviewableScores} />
+        <ErrorBoundaryRoute path={`${match.url}reviewables`} component={Reviewables} />
+        <ErrorBoundaryRoute path={`${match.url}scheduler-stats`} component={SchedulerStats} />
+        <ErrorBoundaryRoute path={`${match.url}schema-migration-details`} component={SchemaMigrationDetails} />
+        <ErrorBoundaryRoute path={`${match.url}schema-migrations`} component={SchemaMigrations} />
+        <ErrorBoundaryRoute path={`${match.url}screened-emails`} component={ScreenedEmails} />
+        <ErrorBoundaryRoute path={`${match.url}screened-ip-addresses`} component={ScreenedIpAddresses} />
+        <ErrorBoundaryRoute path={`${match.url}screened-urls`} component={ScreenedUrls} />
+        <ErrorBoundaryRoute path={`${match.url}search-logs`} component={SearchLogs} />
+        <ErrorBoundaryRoute path={`${match.url}shared-drafts`} component={SharedDrafts} />
+        <ErrorBoundaryRoute path={`${match.url}shelved-notifications`} component={ShelvedNotifications} />
+        <ErrorBoundaryRoute path={`${match.url}single-sign-on-records`} component={SingleSignOnRecords} />
+        <ErrorBoundaryRoute path={`${match.url}site-settings`} component={SiteSettings} />
+        <ErrorBoundaryRoute path={`${match.url}skipped-email-logs`} component={SkippedEmailLogs} />
+        <ErrorBoundaryRoute path={`${match.url}stylesheet-cache`} component={StylesheetCache} />
+        <ErrorBoundaryRoute path={`${match.url}tag-group-memberships`} component={TagGroupMemberships} />
+        <ErrorBoundaryRoute path={`${match.url}tag-group-permissions`} component={TagGroupPermissions} />
+        <ErrorBoundaryRoute path={`${match.url}tag-groups`} component={TagGroups} />
+        <ErrorBoundaryRoute path={`${match.url}tag-search-data`} component={TagSearchData} />
+        <ErrorBoundaryRoute path={`${match.url}tag-users`} component={TagUsers} />
+        <ErrorBoundaryRoute path={`${match.url}tags`} component={Tags} />
+        <ErrorBoundaryRoute path={`${match.url}tags-web-hooks`} component={TagsWebHooks} />
+        <ErrorBoundaryRoute path={`${match.url}theme-fields`} component={ThemeFields} />
+        <ErrorBoundaryRoute path={`${match.url}theme-modifier-sets`} component={ThemeModifierSets} />
+        <ErrorBoundaryRoute path={`${match.url}theme-settings`} component={ThemeSettings} />
+        <ErrorBoundaryRoute path={`${match.url}theme-translation-overrides`} component={ThemeTranslationOverrides} />
+        <ErrorBoundaryRoute path={`${match.url}themes`} component={Themes} />
+        <ErrorBoundaryRoute path={`${match.url}top-topics`} component={TopTopics} />
+        <ErrorBoundaryRoute path={`${match.url}topic-allowed-groups`} component={TopicAllowedGroups} />
+        <ErrorBoundaryRoute path={`${match.url}topic-allowed-users`} component={TopicAllowedUsers} />
+        <ErrorBoundaryRoute path={`${match.url}topic-custom-fields`} component={TopicCustomFields} />
+        <ErrorBoundaryRoute path={`${match.url}topic-embeds`} component={TopicEmbeds} />
+        <ErrorBoundaryRoute path={`${match.url}topic-groups`} component={TopicGroups} />
+        <ErrorBoundaryRoute path={`${match.url}topic-invites`} component={TopicInvites} />
+        <ErrorBoundaryRoute path={`${match.url}topic-link-clicks`} component={TopicLinkClicks} />
+        <ErrorBoundaryRoute path={`${match.url}topic-links`} component={TopicLinks} />
+        <ErrorBoundaryRoute path={`${match.url}topic-search-data`} component={TopicSearchData} />
+        <ErrorBoundaryRoute path={`${match.url}topic-tags`} component={TopicTags} />
+        <ErrorBoundaryRoute path={`${match.url}topic-thumbnails`} component={TopicThumbnails} />
+        <ErrorBoundaryRoute path={`${match.url}topic-timers`} component={TopicTimers} />
+        <ErrorBoundaryRoute path={`${match.url}topic-users`} component={TopicUsers} />
+        <ErrorBoundaryRoute path={`${match.url}topic-views`} component={TopicViews} />
+        <ErrorBoundaryRoute path={`${match.url}topics`} component={Topics} />
+        <ErrorBoundaryRoute path={`${match.url}translation-overrides`} component={TranslationOverrides} />
+        <ErrorBoundaryRoute path={`${match.url}unsubscribe-keys`} component={UnsubscribeKeys} />
+        <ErrorBoundaryRoute path={`${match.url}uploads`} component={Uploads} />
+        <ErrorBoundaryRoute path={`${match.url}user-actions`} component={UserActions} />
+        <ErrorBoundaryRoute path={`${match.url}user-api-key-scopes`} component={UserApiKeyScopes} />
+        <ErrorBoundaryRoute path={`${match.url}user-api-keys`} component={UserApiKeys} />
+        <ErrorBoundaryRoute path={`${match.url}user-archived-messages`} component={UserArchivedMessages} />
+        <ErrorBoundaryRoute path={`${match.url}user-associated-accounts`} component={UserAssociatedAccounts} />
+        <ErrorBoundaryRoute path={`${match.url}user-auth-token-logs`} component={UserAuthTokenLogs} />
+        <ErrorBoundaryRoute path={`${match.url}user-auth-tokens`} component={UserAuthTokens} />
+        <ErrorBoundaryRoute path={`${match.url}user-avatars`} component={UserAvatars} />
+        <ErrorBoundaryRoute path={`${match.url}user-badges`} component={UserBadges} />
+        <ErrorBoundaryRoute path={`${match.url}user-custom-fields`} component={UserCustomFields} />
+        <ErrorBoundaryRoute path={`${match.url}user-emails`} component={UserEmails} />
+        <ErrorBoundaryRoute path={`${match.url}user-exports`} component={UserExports} />
+        <ErrorBoundaryRoute path={`${match.url}user-field-options`} component={UserFieldOptions} />
+        <ErrorBoundaryRoute path={`${match.url}user-fields`} component={UserFields} />
+        <ErrorBoundaryRoute path={`${match.url}user-histories`} component={UserHistories} />
+        <ErrorBoundaryRoute path={`${match.url}user-ip-address-histories`} component={UserIpAddressHistories} />
+        <ErrorBoundaryRoute path={`${match.url}user-notification-schedules`} component={UserNotificationSchedules} />
+        <ErrorBoundaryRoute path={`${match.url}user-open-ids`} component={UserOpenIds} />
+        <ErrorBoundaryRoute path={`${match.url}user-options`} component={UserOptions} />
+        <ErrorBoundaryRoute path={`${match.url}user-profile-views`} component={UserProfileViews} />
+        <ErrorBoundaryRoute path={`${match.url}user-profiles`} component={UserProfiles} />
+        <ErrorBoundaryRoute path={`${match.url}user-search-data`} component={UserSearchData} />
+        <ErrorBoundaryRoute path={`${match.url}user-second-factors`} component={UserSecondFactors} />
+        <ErrorBoundaryRoute path={`${match.url}user-security-keys`} component={UserSecurityKeys} />
+        <ErrorBoundaryRoute path={`${match.url}user-stats`} component={UserStats} />
+        <ErrorBoundaryRoute path={`${match.url}user-uploads`} component={UserUploads} />
+        <ErrorBoundaryRoute path={`${match.url}user-visits`} component={UserVisits} />
+        <ErrorBoundaryRoute path={`${match.url}user-warnings`} component={UserWarnings} />
+        <ErrorBoundaryRoute path={`${match.url}users`} component={Users} />
+        <ErrorBoundaryRoute path={`${match.url}watched-words`} component={WatchedWords} />
+        <ErrorBoundaryRoute path={`${match.url}web-crawler-requests`} component={WebCrawlerRequests} />
+        <ErrorBoundaryRoute path={`${match.url}web-hook-event-types-hooks`} component={WebHookEventTypesHooks} />
+        <ErrorBoundaryRoute path={`${match.url}web-hook-events`} component={WebHookEvents} />
+        <ErrorBoundaryRoute path={`${match.url}web-hooks`} component={WebHooks} />
         {/* jhipster-needle-add-route-path - JHipster will add routes here */}
       </Switch>
     </div>

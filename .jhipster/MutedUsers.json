@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103501",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "muted_users",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "mutedUserId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "MutedUsers",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

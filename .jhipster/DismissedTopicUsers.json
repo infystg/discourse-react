@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103430",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "dismissed_topic_users",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "DismissedTopicUsers",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

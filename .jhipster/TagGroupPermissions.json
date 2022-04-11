@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103545",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tag_group_permissions",
+  "fields": [
+    {
+      "fieldName": "tagGroupId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "groupId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "permissionType",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TagGroupPermissions",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

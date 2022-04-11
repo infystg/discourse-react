@@ -1,0 +1,73 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103526",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "remote_themes",
+  "fields": [
+    {
+      "fieldName": "remoteUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "remoteVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "localVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "aboutUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "licenseUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commitsBehind",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "remoteUpdatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "privateKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "branch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastErrorText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "authors",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "themeVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "minimumDiscourseVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maximumDiscourseVersion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RemoteThemes",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

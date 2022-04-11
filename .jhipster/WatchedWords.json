@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103644",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "watched_words",
+  "fields": [
+    {
+      "fieldName": "word",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "replacement",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "WatchedWords",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

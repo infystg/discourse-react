@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103532",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "schema_migration_details",
+  "fields": [
+    {
+      "fieldName": "version",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hostname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gitVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "railsVersion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "direction",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SchemaMigrationDetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

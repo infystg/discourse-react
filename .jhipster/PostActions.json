@@ -1,0 +1,77 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103512",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "post_actions",
+  "fields": [
+    {
+      "fieldName": "postId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postActionTypeId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deletedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "deletedById",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "relatedPostId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "staffTookAction",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deferredById",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "targetsTopic",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "agreedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "agreedById",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deferredAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "disagreedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "disagreedById",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PostActions",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

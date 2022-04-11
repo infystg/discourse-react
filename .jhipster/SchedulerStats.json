@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103531",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "scheduler_stats",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "hostname",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pid",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "durationMs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "liveSlotsStart",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "liveSlotsFinish",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "startedAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "success",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "error",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SchedulerStats",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

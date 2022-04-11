@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103515",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "post_replies",
+  "fields": [
+    {
+      "fieldName": "postId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "replyPostId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PostReplies",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

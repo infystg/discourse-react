@@ -1,0 +1,83 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103635",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "user_profiles",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "website",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bioRaw",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bioCooked",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dismissedBannerKey",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "bioCookedVersion",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "badgeGrantedTitle",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "views",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "profileBackgroundUploadId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "cardBackgroundUploadId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "grantedTitleBadgeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "featuredTopicId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserProfiles",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "badges",
+      "otherEntityRelationshipName": "userProfiles",
+      "relationshipName": "badges",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "uploads",
+      "otherEntityRelationshipName": "userProfiles",
+      "relationshipName": "uploads",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

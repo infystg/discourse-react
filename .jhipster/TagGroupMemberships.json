@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103544",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tag_group_memberships",
+  "fields": [
+    {
+      "fieldName": "tagId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tagGroupId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TagGroupMemberships",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

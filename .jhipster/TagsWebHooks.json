@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103550",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tags_web_hooks",
+  "fields": [
+    {
+      "fieldName": "webHookId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tagId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TagsWebHooks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103640",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "user_uploads",
+  "fields": [
+    {
+      "fieldName": "uploadId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserUploads",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

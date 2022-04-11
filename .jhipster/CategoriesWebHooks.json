@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103415",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "categories_web_hooks",
+  "fields": [
+    {
+      "fieldName": "webHookId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "categoryId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CategoriesWebHooks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

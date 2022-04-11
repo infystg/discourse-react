@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103439",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "group_archived_messages",
+  "fields": [
+    {
+      "fieldName": "groupId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GroupArchivedMessages",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103504",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "onceoff_logs",
+  "fields": [
+    {
+      "fieldName": "jobName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "OnceoffLogs",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103506",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "permalinks",
+  "fields": [
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "postId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "categoryId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "externalUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tagId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Permalinks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

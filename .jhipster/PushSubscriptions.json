@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103524",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "push_subscriptions",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "data",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PushSubscriptions",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

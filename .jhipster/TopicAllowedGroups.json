@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103557",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "topic_allowed_groups",
+  "fields": [
+    {
+      "fieldName": "groupId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TopicAllowedGroups",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

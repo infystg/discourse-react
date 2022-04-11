@@ -1,0 +1,55 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103540",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "single_sign_on_records",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "externalId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastPayload",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "externalUsername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalAvatarUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalProfileBackgroundUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "externalCardBackgroundUrl",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SingleSignOnRecords",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

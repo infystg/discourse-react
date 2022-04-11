@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103618",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "user_archived_messages",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserArchivedMessages",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

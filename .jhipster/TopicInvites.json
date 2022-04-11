@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103602",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "topic_invites",
+  "fields": [
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "inviteId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TopicInvites",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

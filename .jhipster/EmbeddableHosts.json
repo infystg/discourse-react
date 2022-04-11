@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103437",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "embeddable_hosts",
+  "fields": [
+    {
+      "fieldName": "host",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "categoryId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "className",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "allowedPaths",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "EmbeddableHosts",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

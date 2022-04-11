@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103647",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "web_hook_events",
+  "fields": [
+    {
+      "fieldName": "webHookId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "headers",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payload",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "responseHeaders",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "responseBody",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "WebHookEvents",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

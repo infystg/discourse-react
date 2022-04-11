@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103528",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "reviewable_histories",
+  "fields": [
+    {
+      "fieldName": "reviewableId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "reviewableHistoryType",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "edited",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ReviewableHistories",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

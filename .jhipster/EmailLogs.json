@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103435",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "email_logs",
+  "fields": [
+    {
+      "fieldName": "toAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "emailType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "bounceKey",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bounced",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "messageId",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "EmailLogs",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

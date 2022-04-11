@@ -1,0 +1,47 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103434",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "email_change_requests",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "oldEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "newEmail",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "oldEmailTokenId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "newEmailTokenId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "changeState",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "requestedByUserId",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "EmailChangeRequests",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,30 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103616",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "user_api_key_scopes",
+  "fields": [
+    {
+      "fieldName": "userApiKeyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "allowedParameters",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "UserApiKeyScopes",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

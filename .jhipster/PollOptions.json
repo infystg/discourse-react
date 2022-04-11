@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103508",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "poll_options",
+  "fields": [
+    {
+      "fieldName": "pollId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "digest",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "html",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "anonymousVotes",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "PollOptions",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "pollVotes",
+      "otherEntityRelationshipName": "pollOptions",
+      "relationshipName": "pollVotes",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

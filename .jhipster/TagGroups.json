@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103546",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "tag_groups",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "parentTagId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "onePerTopic",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TagGroups",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

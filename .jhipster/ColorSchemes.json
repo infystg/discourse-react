@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103426",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "color_schemes",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "version",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "viaWizard",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "baseSchemeId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "themeId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "userSelectable",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ColorSchemes",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

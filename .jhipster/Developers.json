@@ -1,0 +1,21 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103428",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "developers",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Developers",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

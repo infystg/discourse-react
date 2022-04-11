@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103646",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "web_hook_event_types_hooks",
+  "fields": [
+    {
+      "fieldName": "webHookId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "webHookEventTypeId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "WebHookEventTypesHooks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

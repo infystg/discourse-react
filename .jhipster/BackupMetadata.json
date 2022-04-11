@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103408",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "backup_metadata",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BackupMetadata",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

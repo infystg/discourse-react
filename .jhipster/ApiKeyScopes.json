@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103402",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "api_key_scopes",
+  "fields": [
+    {
+      "fieldName": "apiKeyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "resource",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "allowedParameters",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ApiKeyScopes",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

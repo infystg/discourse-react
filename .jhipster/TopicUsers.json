@@ -1,0 +1,85 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103609",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "topic_users",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "posted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastReadPostNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "highestSeenPostNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lastVisitedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "firstVisitedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "notificationLevel",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "notificationsChangedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "notificationsReasonId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "totalMsecsViewed",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "clearedPinnedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastEmailedPostNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "liked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "bookmarked",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "lastPostedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TopicUsers",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

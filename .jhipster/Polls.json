@@ -1,0 +1,91 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103510",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "polls",
+  "fields": [
+    {
+      "fieldName": "postId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "closeAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "results",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "visibility",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "min",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "max",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "step",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "anonymousVoters",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "chartType",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "groups",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Polls",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "posts",
+      "otherEntityRelationshipName": "polls",
+      "relationshipName": "posts",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "pollVotes",
+      "otherEntityRelationshipName": "polls",
+      "relationshipName": "pollVotes",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

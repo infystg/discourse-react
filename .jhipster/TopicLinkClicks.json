@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103603",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "topic_link_clicks",
+  "fields": [
+    {
+      "fieldName": "topicLinkId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipAddress",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TopicLinkClicks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103537",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "search_logs",
+  "fields": [
+    {
+      "fieldName": "term",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "searchResultId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "searchType",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "searchResultType",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SearchLogs",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

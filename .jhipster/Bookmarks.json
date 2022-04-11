@@ -1,0 +1,60 @@
+{
+  "applications": "*",
+  "changelogDate": "20220411103413",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bookmarks",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "topicId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reminderType",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "reminderAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "reminderLastSentAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "reminderSetAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "autoDeletePreference",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "pinned",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Bookmarks",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
