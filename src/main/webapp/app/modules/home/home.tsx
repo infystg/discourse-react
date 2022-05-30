@@ -1,24 +1,29 @@
 import './home.scss';
-
 import React, { useEffect, useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Row, Col, Alert } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleRight, faArrowRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 import parse from 'html-react-parser';
 
 import { getLoginUrl, REDIRECT_URL } from 'app/shared/util/url-utils';
+import { useAppSelector } from 'app/config/store';
+import axios from 'axios';
 
 export const Home = () => {
-  const [announcement, setAnnouncement] = useState([{ title: '', raw: '', id: 0 }]);
+  const account = useAppSelector(state => state.authentication.account);
+  const isAuthenticated = useAppSelector(state => state.authentication.isAuthenticated);
+  const defaultAnnouncement = [{ title: 'No Announcement Found', raw: 'Not Found', id: 0 }];
+
+  const [announcement, setAnnouncement] = useState(defaultAnnouncement);
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    fetch('/public/announcements')
-      .then(res => res.json())
-      .then(data => setAnnouncement(data))
+    axios
+      .get('/public/announcements')
+      .then(res => setAnnouncement(res.data.length === 0 ? defaultAnnouncement : res.data))
       .catch(err => setAnnouncement([{ id: 0, title: 'Unable to load Public Announcements', raw: '<p>Please Reload the page' }]));
   }, []);
 
@@ -39,10 +44,18 @@ export const Home = () => {
             <Col sm="12">
               <h3 className="display-4 login-heading">
                 Infosys | <span className="display-6">Forums</span>
+                {isAuthenticated ? <p style={{ fontSize: '1.5rem' }}>Hi {account.firstName}.</p> : ''}
               </h3>
-              <a href={getLoginUrl()} className="btn btn-dark p-2 px-5 login-btn">
-                Log In / Register
-              </a>
+
+              {isAuthenticated ? (
+                <Link to="/allTopics" className="btn btn-dark p-2 px-5 login-btn">
+                  All Topics <FontAwesomeIcon icon={faArrowRight} />
+                </Link>
+              ) : (
+                <a href={getLoginUrl()} className="btn btn-dark p-2 px-5 login-btn">
+                  Log In / Register
+                </a>
+              )}
             </Col>
           </Row>
         </Col>
@@ -63,14 +76,14 @@ export const Home = () => {
                     onClick={e => {
                       document.getElementById('cardContent').style.overflowY = 'scroll';
                       document.getElementById('annoucementPage').style.display = 'inline';
-                      console.error((e.currentTarget.style.display = 'none'));
+                      e.currentTarget.style.display = 'none';
                     }}
                   >
                     See More {'  '}
                     <FontAwesomeIcon icon={faAngleDown} />
                   </a>
                   <Link
-                    to={{ pathname: '/announcement', state: announcement[current] }}
+                    to={{ pathname: '/announcement', state: { element: announcement[current] } }}
                     id="annoucementPage"
                     className="btn btn-outline-dark"
                     style={{ display: 'none' }}

@@ -6,7 +6,8 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-style: normal;
+  font-style: normal !important;
+  letter-spacing: 0.1px !important;
 }
 
 // remove bullets
@@ -131,9 +132,10 @@ Generic styles
   margin: 1px 10px 1px 10px;
 }
 
-.shadow {
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
-  border-radius: 2px;
+.shadow,
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 3px rgba(0, 0, 0, 0.24) !important;
+  // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
 }
 
 .error {

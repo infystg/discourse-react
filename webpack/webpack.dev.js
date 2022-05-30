@@ -49,11 +49,16 @@ module.exports = async options =>
       },
       port: 9060,
       proxy: [
+        // {
+        //   context: ['/public'],
+        //   target: `https://forums.surveymaster.in`,
+        //   secure: false,
+        //   changeOrigin: true,
+        // },
         {
-          context: ['/api', '/services', '/management', '/v3/api-docs', '/h2-console', '/oauth2', '/login', '/auth'],
-          target: `http${options.tls ? 's' : ''}://localhost:8080`,
+          context: ['/public', '/api', '/services', '/management', '/v3/api-docs', '/h2-console', '/oauth2', '/login', '/auth'],
+          target: `http://localhost:8080`,
           secure: false,
-          changeOrigin: options.tls,
         },
       ],
       https: options.tls,
