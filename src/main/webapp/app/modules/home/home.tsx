@@ -1,15 +1,27 @@
 import './home.scss';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { Row, Col, Alert } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown, faAngleRight, faArrowRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+
+import parse from 'html-react-parser';
 
 import { getLoginUrl, REDIRECT_URL } from 'app/shared/util/url-utils';
-import { useAppSelector } from 'app/config/store';
 
 export const Home = () => {
-  const account = useAppSelector(state => state.authentication.account);
+  const [announcement, setAnnouncement] = useState([{ title: '', raw: '', id: 0 }]);
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    fetch('/public/announcements')
+      .then(res => res.json())
+      .then(data => setAnnouncement(data))
+      .catch(err => setAnnouncement([{ id: 0, title: 'Unable to load Public Announcements', raw: '<p>Please Reload the page' }]));
+  }, []);
+
   useEffect(() => {
     const redirectURL = localStorage.getItem(REDIRECT_URL);
     if (redirectURL) {
@@ -19,70 +31,69 @@ export const Home = () => {
   });
 
   return (
-    <Row>
-      <Col md="3" className="pad">
-        <span className="hipster rounded" />
-      </Col>
-      <Col md="9">
-        <h2>Welcome, Java Hipster!</h2>
-        <p className="lead">This is your homepage</p>
-        {account?.login ? (
-          <div>
-            <Alert color="success">You are logged in as user {account.login}.</Alert>
-          </div>
-        ) : (
-          <div>
-            <Alert color="warning">
-              If you want to
-              <span>&nbsp;</span>
-              <a href={getLoginUrl()} className="alert-link">
-                sign in
+    <Fragment>
+      <div className="background background-home"></div>
+      <Row className="homepage-flex">
+        <Col sm="12" md="4" lg="6" className="py-3">
+          <Row>
+            <Col sm="12">
+              <h3 className="display-4 login-heading">
+                Infosys | <span className="display-6">Forums</span>
+              </h3>
+              <a href={getLoginUrl()} className="btn btn-dark p-2 px-5 login-btn">
+                Log In / Register
               </a>
-              , you can try the default accounts:
-              <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-              <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-            </Alert>
+            </Col>
+          </Row>
+        </Col>
+        <Col sm="12" md="8" lg="6" style={{ height: '100%' }}>
+          <div className="card p-4" style={{ height: '100%' }}>
+            <div id="cardContent" className="card-body p-0" style={{ overflowX: 'scroll', overflowY: 'hidden' }}>
+              <h4 className="card-title header">{announcement[current].title}</h4>
+              <hr />
+              {parse(announcement[current].raw)}
+            </div>
+            <hr />
+            <div style={{ marginLeft: 'auto', padding: '0.5rem 0' }}>
+              {
+                <Fragment>
+                  <a
+                    href="#"
+                    style={{ color: '#8626c3' }}
+                    onClick={e => {
+                      document.getElementById('cardContent').style.overflowY = 'scroll';
+                      document.getElementById('annoucementPage').style.display = 'inline';
+                      console.error((e.currentTarget.style.display = 'none'));
+                    }}
+                  >
+                    See More {'  '}
+                    <FontAwesomeIcon icon={faAngleDown} />
+                  </a>
+                  <Link
+                    to={{ pathname: '/announcement', state: announcement[current] }}
+                    id="annoucementPage"
+                    className="btn btn-outline-dark"
+                    style={{ display: 'none' }}
+                  >
+                    View
+                  </Link>
+                </Fragment>
+              }
+            </div>
+            <a href="#" className="next-slide" onClick={() => setCurrent((current + 1) % announcement.length)}>
+              <FontAwesomeIcon icon={faAngleRight} />
+            </a>
+            <a
+              href="#"
+              className="prev-slide"
+              onClick={() => (current === 0 ? setCurrent(announcement.length - 1) : setCurrent(current - 1))}
+            >
+              <FontAwesomeIcon icon={faAngleLeft} />
+            </a>
           </div>
-        )}
-        <p>If you have any question on JHipster:</p>
-
-        <ul>
-          <li>
-            <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
-              JHipster homepage
-            </a>
-          </li>
-          <li>
-            <a href="https://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">
-              JHipster on Stack Overflow
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener noreferrer">
-              JHipster bug tracker
-            </a>
-          </li>
-          <li>
-            <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-              JHipster public chat room
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer">
-              follow @jhipster on Twitter
-            </a>
-          </li>
-        </ul>
-
-        <p>
-          If you like JHipster, do not forget to give us a star on{' '}
-          <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          !
-        </p>
-      </Col>
-    </Row>
+        </Col>
+      </Row>
+    </Fragment>
   );
 };
 

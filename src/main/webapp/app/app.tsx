@@ -3,7 +3,6 @@ import './app.scss';
 import 'app/config/dayjs.ts';
 
 import React, { useEffect } from 'react';
-import { Card } from 'reactstrap';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -33,10 +32,9 @@ export const App = () => {
   const isInProduction = useAppSelector(state => state.applicationProfile.inProduction);
   const isOpenAPIEnabled = useAppSelector(state => state.applicationProfile.isOpenAPIEnabled);
 
-  const paddingTop = '60px';
   return (
     <Router basename={baseHref}>
-      <div className="app-container" style={{ paddingTop }}>
+      <div className="app-container">
         <ToastContainer position={toast.POSITION.TOP_LEFT} className="toastify-container" toastClassName="toastify-toast" />
         <ErrorBoundary>
           <Header
@@ -46,15 +44,8 @@ export const App = () => {
             isInProduction={isInProduction}
             isOpenAPIEnabled={isOpenAPIEnabled}
           />
+          <AppRoutes />
         </ErrorBoundary>
-        <div className="container-fluid view-container" id="app-view-container">
-          <Card className="jh-card">
-            <ErrorBoundary>
-              <AppRoutes />
-            </ErrorBoundary>
-          </Card>
-          <Footer />
-        </div>
       </div>
     </Router>
   );

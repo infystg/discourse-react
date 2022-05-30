@@ -4,6 +4,7 @@ import Loadable from 'react-loadable';
 
 import LoginRedirect from 'app/modules/login/login-redirect';
 import Logout from 'app/modules/login/logout';
+import Announcement from './modules/home/announcement';
 import Home from 'app/modules/home/home';
 import EntitiesRoutes from 'app/entities/routes';
 import PrivateRoute from 'app/shared/auth/private-route';
@@ -23,6 +24,7 @@ const Routes = () => {
     <div className="view-routes">
       <Switch>
         <ErrorBoundaryRoute path="/logout" component={Logout} />
+        <ErrorBoundaryRoute exact path="/announcement" component={Announcement} />
         <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
         <ErrorBoundaryRoute path="/" exact component={Home} />
         <ErrorBoundaryRoute path="/oauth2/authorization/oidc" component={LoginRedirect} />

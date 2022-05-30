@@ -1,15 +1,53 @@
 // Override Boostrap variables
-@import '~bootswatch/dist/darkly/variables';
 // Import Bootstrap source files from node_modules
 @import '~bootstrap/scss/bootstrap';
-@import '~bootswatch/dist/darkly/bootswatch';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
 }
 
+// remove bullets
+ul {
+  list-style: none !important;
+  padding: 0 !important;
+}
+
+// Input Box
+input {
+  box-shadow: none !important;
+}
+
+// Strike line
+hr {
+  height: 0 !important;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+  margin: 0.5rem 0 !important;
+  opacity: 0.25 !important;
+}
+
+// ScrollBar
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(144, 144, 144);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(86, 86, 86);
+}
+
+// Links
 a {
-  color: #533f03;
-  font-weight: bold;
+  color: #8626c3;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 * {
@@ -24,22 +62,11 @@ a {
 
 .app-container {
   box-sizing: border-box;
-  .view-container {
-    width: 100%;
-    height: calc(100% - 40px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 1rem;
-    .card {
-      padding: 1rem;
-    }
-    .view-routes {
-      height: 100%;
-      > div {
-        height: 100%;
-      }
-    }
-  }
+  width: 100%;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  padding: 1.5rem;
 }
 
 .fullscreen {

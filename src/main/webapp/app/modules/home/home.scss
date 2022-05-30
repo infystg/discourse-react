@@ -1,10 +1,53 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
-.hipster {
-  display: inline-block;
-  width: 100%;
-  height: 497px;
-  background: url('../../../content/images/jhipster_family_member_2.svg') no-repeat center top;
-  background-size: contain;
+
+.background {
+  position: fixed !important;
+  top: 48px !important;
+  left: 0 !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  z-index: -1 !important;
+
+  &-home {
+    background: #fff url(https://forums.surveymaster.in/content/9a090a3326c460d1c096204ab61a0f5d.png) top left/cover;
+    opacity: 0.65;
+  }
+}
+
+// Login (flex-left) styling
+.login-heading {
+  font-weight: 600 !important;
+}
+.login-btn:hover {
+  background-color: #8626c3 !important;
+}
+
+// HomePage
+.homepage-flex {
+  height: calc(100vh - 48px - 3rem);
+  align-items: center;
+}
+
+// Card (flex-left) styling
+.header {
+  font-weight: 600;
+  font-size: '2.4rem';
+}
+.next-slide {
+  margin: 0px !important;
+  position: absolute !important;
+  top: 50% !important;
+  bottom: 50% !important;
+  right: 5px !important;
+  font-size: 1.25rem !important;
+}
+.prev-slide {
+  margin: 0px !important;
+  position: absolute !important;
+  top: 50% !important;
+  bottom: 50% !important;
+  left: 5px !important;
+  font-size: 1.25rem !important;
 }
